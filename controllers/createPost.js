@@ -161,7 +161,7 @@ const getUserPost = async (req, res) => {
 const likePost = async (req, res) => {
   const { postId } = req.body;
   const userId = req.user.user.id;
-
+  console.log(postId, userId);
   try {
     const postRef = db.collection("posts").doc(postId);
 
